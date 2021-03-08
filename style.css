@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.iconfont {
+    font-size: 38px;
+ }
+#canvas {
+    display: block;
+}
+#touchBar{
+    width: 470px;
+    height: 70px;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 35px;
+    background-color: #F7F7F7;
+    box-shadow: 0 -4px 45px #c0c0c0 ;
+}
+.colorItem:hover,.toolItem:hover{
+    transform: scale(1.05,1.05);
+}
+.tools{
+    width: 200px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-right:1px solid #d0d0d0 ;
+}
+.toolItem{
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+.toolItem.current{
+    transform:scale(1.2,1.2)
+}
+#colorArea{
+    width: 200px;
+    height: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-evenly;
+}
+.colorItem{
+    width: 28px;
+    height: 28px;
+    margin-left: 8px;
+    margin-right: 8px;
+    border-radius: 50%;
+}
+.colorItem.current::after{
+content: '';
+width: 16px;
+height: 16px;
+border-radius: 50%;
+border: 2px solid #fff;
+position: absolute;
+transform: translate(4px,4px);
+}
+#color1{
+    background-color: #010101;
+}
+#color2{
+    background-color: #3A7CF3;
+}
+#color3{
+    background-color: #79D475;
+}
+#color4{
+    background-color: #F7D254;
+}
+#color5{
+    background-color: #E8464A;
+}
+#color6{
+    background-color: #603BAF;
+}
+#color7{
+    background-color: #58B8B3;
+}
+#color8{
+    background-color: #9C6A46;
+}
+@media(max-width:500px){
+    #touchBar{
+        width: 95%;
+        height: 160px;
+        flex-wrap: wrap;
+        bottom: 5px;
+    }
+    .tools,#colorArea{
+        width: 100%;
+    }
+    #colorArea{
+        height: 100px;
+    }
+    .colorItem{
+        width: 40px;
+        height: 40px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .colorItem.current::after{
+        width: 30px;
+        height: 30px;
+        box-sizing: border-box;
+        transform: translate(5px,5px);
+    }
+}
